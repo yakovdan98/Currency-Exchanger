@@ -15,7 +15,14 @@
 
     <form id="currency-form">
       <div class="form-group row">
-        <label for="amount" class="col-4 col-form-label">Amount in USD:</label>
+        <label for="currency-from" class="col-4 col-form-label">Currency to Convert From:</label>
+        <div class="col-6">
+          <select id="currency-from" name="currency-from" class="custom-select"></select>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="amount" class="col-4 col-form-label">Amount:</label>
         <div class="col-6">
           <input id="amount" name="amount" type="text" class="form-control">
         </div>

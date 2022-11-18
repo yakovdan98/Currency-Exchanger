@@ -43,13 +43,19 @@ function handleSubmission(e){
 
 }
 
-window.addEventListener("load", function() {
-  let currencies = ['EUR', 'JPY', 'GBP', 'CNY', 'AUD', 'AAA'];
+function addToDropDown(currencies, dropDownID){
   currencies.forEach(function(element) {
     const option = document.createElement('option');
     option.value = element;
     option.innerText = element;
-    document.getElementById('currency').append(option);
+    document.getElementById(dropDownID).append(option);
+  
   });
+}
+
+window.addEventListener("load", function() {
+  let currencies = ['EUR', 'JPY', 'GBP', 'CNY', 'AUD', 'AAA'];
+  addToDropDown(currencies, "currency-from");
+  addToDropDown(currencies, "currency");
   this.document.getElementById("currency-form").addEventListener('submit', handleSubmission);
 });
