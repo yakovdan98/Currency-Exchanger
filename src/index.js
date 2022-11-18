@@ -10,9 +10,14 @@ function getAPIData(){
       throw new Error(errorMsg);
     }
     printConversion(response);
-  });
-  //.catch(erorr => printError(error));
+  })
+  .catch(error => printError(error));
 }
+
+function printError(error) {
+  document.getElementById('response-error').innerText = error;
+}
+
 function printConversion(data) {
   console.log(data.conversion_rates);
   let currency = document.getElementById("currency").value;
@@ -26,7 +31,7 @@ function handleSubmission(e){
 }
 
 window.addEventListener("load", function() {
-  let currencies = ['EUR', 'JPY', 'GBP', 'CNY', 'AUD'];
+  let currencies = ['EUR', 'JPY', 'GBP', 'CNY', 'AUD', 'AAA'];
   currencies.forEach(function(element) {
     const option = document.createElement('option');
     option.value = element;
