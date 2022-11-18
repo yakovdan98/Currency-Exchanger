@@ -21,7 +21,17 @@ function printError(error) {
 function printConversion(data) {
   console.log(data.conversion_rates);
   let currency = document.getElementById("currency").value;
-  document.getElementById("response").innerHTML = data.conversion_rates[currency];
+  let amount = parseInt(document.getElementById("amount").value);
+  let convertedAmount = (amount * data.conversion_rates[currency]).toFixed(2);
+  if(data.conversion_rates[currency] === undefined){
+    document.getElementById("response").innerHTML = `This currency is unavailable ${currency}`;
+  } else {
+    const h6 = document.createElement("h6")
+    h6.append(`${amount} USD is ${convertedAmount} ${currency}`);
+    document.getElementById("response").append(h6);
+  }
+
+  
 }
 
 function handleSubmission(e){
