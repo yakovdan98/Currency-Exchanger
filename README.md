@@ -4,7 +4,6 @@
 * Daniel Yakovlev
 
 ## Description
-A website that takes user input through radio buttons and outputs a programming language they should learn
 
 ## Technologies Used
 
@@ -19,8 +18,8 @@ A website that takes user input through radio buttons and outputs a programming 
 * ESLint
 
 ## Description
-A website that takes your age an expected age and outputs your age and years left on different planets in the solar system such as mercury, venus, mars, and jupiter.
-git
+
+
 ## Setup/Installation Requirements
 
 * Clone this repo to your workspace.
