@@ -1,3 +1,25 @@
 body {
   background-color:antiquewhite;
 }
+
+.jumbotron {
+  margin: 1vh;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  background-color: rgb(196, 201, 255);
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-weight:700;
+  color: white;
+}
+
+.jumbotron p {
+  font-weight: 700;
+  color: white;
+}
+
+.response {
+  margin: 10px;
+}

@@ -8,6 +8,11 @@
 
 <body>
   <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-4">Currency Conversion</h1>
+      <p class="lead">Enter an amount and a currency to convert to</p>
+    </div>
+
     <form id="currency-form">
       <div class="form-group row">
         <label for="amount" class="col-4 col-form-label">Amount in USD:</label>
@@ -27,8 +32,9 @@
         </div>
       </div>
       <div class="form-group row">
-        <div class="offset-4 col-8">
-          <div id="response"></div>
+        <label for="response" class="col-4 col-form-label">Converted Amount:</label>
+        <div class="col-6">
+          <div class = response id="response"></div>
           <div id="response-error"></div>
         </div>
       </div>

@@ -24,7 +24,9 @@ function printConversion(data) {
   let amount = parseInt(document.getElementById("amount").value);
   let convertedAmount = (amount * data.conversion_rates[currency]).toFixed(2);
   if(data.conversion_rates[currency] === undefined){
-    document.getElementById("response").innerHTML = `This currency is unavailable ${currency}`;
+    const h6 = document.createElement("h6")
+    h6.append(`This currency is unavailable ${currency}`);
+    document.getElementById("response").append(h6);
   } else {
     const h6 = document.createElement("h6")
     h6.append(`${amount} USD is ${convertedAmount} ${currency}`);
@@ -36,6 +38,7 @@ function printConversion(data) {
 
 function handleSubmission(e){
   e.preventDefault();
+  document.getElementById("response").innerText = null;
   getAPIData();
 
 }
