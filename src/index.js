@@ -63,7 +63,7 @@ window.addEventListener("load", function() {
       const errorMsg = `There was a problem accessing the data from Currency Exchange API: ${response.message}`;
       throw new Error(errorMsg);
     }
-    console.log(response);
+    //console.log(response);
     Object.keys(response.conversion_rates).forEach(key => {
       //console.log(key);
       currencies.push(key);

@@ -1,10 +1,10 @@
-# Language Picker
+# Currency Exchanger
 
 ## Contributers
 * Daniel Yakovlev
 
 ## Description
-
+Takes a currency to convert from, an amount and a currency to convert to and outputs the result.
 ## Technologies Used
 
 * HTML 
@@ -16,9 +16,7 @@
 * Jest
 * Babel
 * ESLint
-
-## Description
-
+* ExchangeRate-API
 
 ## Setup/Installation Requirements
 
