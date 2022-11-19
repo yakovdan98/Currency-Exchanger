@@ -56,8 +56,21 @@ function addToDropDown(currencies, dropDownID){
 }
 
 window.addEventListener("load", function() {
-  let currencies = ['USD', 'EUR', 'JPY', 'GBP', 'CNY', 'AUD', 'AAA'];
-  addToDropDown(currencies, "currency-from");
-  addToDropDown(currencies, "currency");
-  this.document.getElementById("currency-form").addEventListener('submit', handleSubmission);
+  let currencies = [];
+  CurrencyService.getCurrency('USD')
+  .then(response => {
+    if(response instanceof Error) {
+      const errorMsg = `There was a problem accessing the data from Currency Exchange API: ${response.message}`;
+      throw new Error(errorMsg);
+    }
+    console.log(response);
+    Object.keys(response.conversion_rates).forEach(key => {
+      //console.log(key);
+      currencies.push(key);
+    });
+    addToDropDown(currencies, "currency-from");
+    addToDropDown(currencies, "currency");
+    this.document.getElementById("currency-form").addEventListener('submit', handleSubmission);
+  })
+  .catch(error => printError(error));
 });
