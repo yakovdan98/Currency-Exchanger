@@ -24,7 +24,7 @@ Takes a currency to convert from, an amount and a currency to convert to and out
 * Navigate to the top level of the directory.
 * got to <https://www.exchangerate-api.com/> and get an API key by entering your email and clicking the get free key button
 create a .env file in the root Currency-Exchanger directory
-type $API_KEY and the key from <https://www.exchangerate-api.com/>
+type API_KEY and the key from <https://www.exchangerate-api.com/>
 * In the root directory of the project, run:
 ```
 $ npm install
